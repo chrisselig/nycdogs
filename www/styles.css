@@ -1,0 +1,37 @@
+
+/* Body */
+body h2{
+  font-family: 'Old Standard TT',sans-serif;
+}
+
+/* Navbar */
+.navbar{
+  background-color:#4C586F;
+}
+
+.navbar .navbar-nav li a:hover, .navbar1 .navbar-nav  .active a {
+  color: #EBECED !important;
+  background-color:#3E3E3B !important;
+}
+
+/* Body */
+body{
+  color:#A2AAB0;
+}
+
+/* List items and links  */
+li a, div #links a, a{
+  padding-top:0;
+  padding-bottom:0;
+  letter-spacing:0.15em;
+  color: #A2AAB0 !important;
+}
+
+/* Headers  */
+h2{
+  color: #CBC5C1;
+}
+
+
+
+
