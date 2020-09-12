@@ -5,24 +5,24 @@
 # library(lubridate)
 # library(sf)
 
-bites_raw <- nyc_bites
-names_raw <- nyc_license
-geo_raw <- nyc_zips
+# bites_raw <- nyc_bites
+# names_raw <- nyc_license
+# geo_raw <- nyc_zips
 
 
 # Create the bites tibble ----
-bites_function <- function(data = bites_raw){
+bites_function <- function(data = nyc_bites){
     bites_tbl <- data
     
     return(bites_tbl)
 }
 
 
-bites <- bites_raw %>% 
-    mutate(year = year())
+# bites <- bites_raw %>% 
+#     mutate(year = year())
     
 
 # Testing functions ----
-data <- bites_raw
-
-bites_tbl <- bites_function()
+# data <- bites_raw
+# 
+# bites_tbl <- bites_function()
