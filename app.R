@@ -57,15 +57,16 @@ ui <-
                 
                 # ** Visualization Panel ----
                 column(
-                    width = 9
+                    width = 8
                 ),
                 
                 # ** Filter Panel ----
                 column(
-                    width = 3,
+                    width = 4,
                     fluidRow(
                         h2('Filters'),
                         
+                        # *** Borough Filter ----
                         pickerInput(
                             inputId = 'bitesBurough',
                             label = 'Burough',
@@ -76,6 +77,23 @@ ui <-
                                 `actions-box` = TRUE,
                                 `multiple-separator` = " | "
                                 )
+                        ),
+                        
+                        br(),
+                        
+                        # * Breed Filter ----
+                        pickerInput(
+                            inputId = 'bitesBreed',
+                            label = 'Breed',
+                            choices = sort(unique(bites_tbl$breed)),
+                            selected = bites_tbl %>% select(breed_rc) %>% pull(),
+                            multiple = TRUE,
+                            options = list(
+                                `actions-box` = TRUE,
+                                liveSearch = TRUE,
+                                size = 1200,
+                                `multiple-separator` = " | "
+                            )
                         )
                     )
                 )
